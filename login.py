@@ -2,11 +2,15 @@ import streamlit as st
 
 st.title('단어 맞추기')
 
-but_게임시작 = st.button('게임사작')
-if but_게임시작:
-    st.switch_page("/pages/c.py")
 
-단어 = st.text_input('단어를 입력하세요')
+but_1 = st.button('3단어 맞추기')
+if but_1:
+    st.switch_page("pages/b.py")
 
-st.write(단어)
+but_2 = st.button('4단어 맞추기')
+if but_2:
+    st.switch_page("pages/c.py")
 
+but_3 = st.button('5단어 맞추기')
+if but_3:
+    st.switch_page("pages/d.py")
