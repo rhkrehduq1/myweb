@@ -4,28 +4,28 @@ st.title('3단어 맞추기')
 
 word = st.text_input("단어를 입력해주세요")
 
-
 result = ''
-if word[0] == 's':
-    result += "🟢"
-elif word[1] == 's' or word[2] == 's':
-    result += "🟡"
+if len(word) < 3:
+    st.warning('3글자 이상의 단어를 입력하세요.')
 else:
-    result += "🔴"
-
-if word[1] == 'u':
-    result += "🟢"
-elif word[0] == 'u' or word[2] == 'u':
-    result += "🟡"
-else:
-    result += "🔴"
-
-if word[2] == 'n':
-    result += "🟢"
-elif word[1] == 'n' or word[0] == 'n':
-    result += "🟡"
-else:
-    result += "🔴"
+    if word[0] == 's':
+        result += "🟢"
+    elif word[1] == 's' or word[2] == 's':
+        result += "🟡"
+    else:       
+        result += "🔴"
+    if word[1] == 'u':
+        result += "🟢"
+    elif word[0] == 'u' or word[2] == 'u':
+        result += "🟡"
+    else:
+            result += "🔴"
+    if word[2] == 'n':
+      result += "🟢"
+    elif word[1] == 'n' or word[0] == 'n':
+      result += "🟡"
+    else:
+         result += "🔴"
 
 
 st.title(result)
@@ -37,8 +37,6 @@ if result == '🟢🟢🟢':
 
 
 
-if word[0] == '' or word[1] == '' or word[2] == '':
-    st.title('글자수가 부족해요')
 
 
 
